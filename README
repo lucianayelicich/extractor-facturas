@@ -1,0 +1,62 @@
+# Extractor Automático de Facturas
+
+![Python](https://img.shields.io/badge/Python-3.9+-blue.svg)
+![Automation](https://img.shields.io/badge/Workflow-Automation-blueviolet.svg)
+![Status](https://img.shields.io/badge/Status-En_Desarrollo-orange.svg)
+
+#.
+
+## 📌 Descripción del Proyecto
+
+Este repositorio contiene una herramienta de automatización en Python enfocada en la **extracción, procesamiento y validación de datos de facturas**. A diferencia de un extractor genérico, este desarrollo integra un módulo de cruce de datos con la matriz de entidades o agentes vinculados bajo la **Ley 23.793** (`rnas_involucradas_ley_23793.xlsx`), permitiendo auditar, clasificar y generar reportes estructurados de forma automática en la carpeta `reportes/`.
+
+---
+
+## 🛠️ Tecnologías y Herramientas Utilizadas
+
+*   **Lenguaje principal:** Python 🐍
+*   **Procesamiento de PDF y Texto:** PyPDF2, pdfplumber o similares.
+*   **OCR (Reconocimiento Óptico de Caracteres):** Tesseract OCR / Pytesseract *(si procesas facturas escaneadas o en formato de imagen)*.
+*   **Estructuración de Datos:** Pandas *(para exportación a formatos organizados)*.
+
+---
+
+## 📊 Estructura Sugerida del Repositorio
+
+├── .venv/                               # Entorno virtual de Python (local)
+├── facturas/                            # Carpeta contenedora de los documentos PDF/imágenes a procesar
+├── reportes/                            # Carpeta donde se exportan los resultados procesados
+├── extractor.py                         # Script principal con la lógica de extracción de datos
+├── README.md                            # Descripción general del proyecto
+└── rnas_involucradas_ley_23793.xlsx     # Matriz/Base de datos de referencia (Ley 23.793)
+
+⚠️ Nota de Privacidad: Por motivos de seguridad y confidencialidad de datos, la carpeta de entrada de facturas locales y los archivos con datos sensibles se encuentran incluidos en el .gitignore para evitar su publicación en el repositorio público.
+
+⚙️ Instalación y Uso
+Para ejecutar el extractor en tu entorno local, sigue estos pasos:
+
+1. Clonar el repositorio
+Bash
+git clone [https://github.com/lucianayelicich/extractor-facturas.git](https://github.com/lucianayelicich/extractor-facturas.git)
+cd extractor-facturas
+2. Configurar el entorno virtual
+Bash
+python -m venv env
+# En Windows:
+.\env\Scripts\activate
+# En macOS/Linux:
+source env/bin/activate
+3. Instalar las dependencias
+Bash
+pip install -r requirements.txt
+4. Ejecutar el script
+Coloca las facturas que deseas procesar en la carpeta correspondiente y ejecuta:
+
+Bash
+python src/extractor.py
+
+
+📬 Contacto
+LinkedIn
+
+GitHub
