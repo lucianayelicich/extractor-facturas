@@ -1,0 +1,10 @@
+# Entorno virtual
+.venv/
+__pycache__/
+
+# Carpetas con datos locales y privados
+facturas/
+reportes/
+
+# Archivos de Excel del sistema local (si contienen datos privados)
+# rnas_involucradas_ley_23793.xlsx
